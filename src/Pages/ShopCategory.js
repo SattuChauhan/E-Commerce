@@ -10,7 +10,7 @@ const ShopCategory = (props) => {
 
   return (
     <div className='shop-category'>
-      <img src={props.banner} alt='' />
+      <img className='shopcategory-banner' src={props.banner} alt='' />
       <div className='shopcategory-indexSort'>
           <p>
             <span>Showing 1-12</span> out of 36 product
@@ -18,7 +18,7 @@ const ShopCategory = (props) => {
           <div className='shopcategory-sort'>
              sort by <img src={dropdown_icon}  alt=''/>
           </div>
-      </div>
+      </div>  
       <div className='shopcategory-product'>
         {all_product.map((item , i) => {
           if(props.category === item.category){
@@ -29,6 +29,9 @@ const ShopCategory = (props) => {
           }
         })}
       </div>
+       <div className='shopcategory-loadmore'>
+          Explore More
+       </div>
     </div>
   )
 }
